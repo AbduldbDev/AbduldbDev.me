@@ -132,7 +132,7 @@ const AboutPage = () => {
       localStorage.getItem("certificates") || "[]"
     );
 
-    const startDate = new Date("2021-11-06");
+    const startDate = new Date("2023-05-01");
     const today = new Date();
     const experience =
       today.getFullYear() -
@@ -246,7 +246,11 @@ const AboutPage = () => {
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="#" className="w-full lg:w-auto">
+              <a
+                href="https://drive.google.com/drive/folders/1KjvhGV8Pibu7z_LCtjUKrtRm5Ue5IdPB?usp=sharing"
+                target="_blank"
+                className="w-full lg:w-auto"
+              >
                 <button
                   data-aos="fade-up"
                   data-aos-duration="800"

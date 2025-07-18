@@ -2,12 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, ArrowRight } from "lucide-react";
 
-// eslint-disable-next-line react/prop-types
 const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
-  // Handle kasus ketika ProjectLink kosong
   const handleLiveDemo = (e) => {
     if (!ProjectLink) {
-      console.log("ProjectLink kosong");
       e.preventDefault();
       alert("Live demo link is not available");
     }
@@ -36,13 +33,13 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
           </div>
 
           <div className="mt-4 space-y-3">
-            <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+            <div className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
               {Title}
-            </h3>
+            </div>
 
-            <p className="text-gray-300/80 text-sm leading-relaxed line-clamp-2">
+            <div className="text-gray-300/80 text-sm leading-relaxed line-clamp-2">
               {Description}
-            </p>
+            </div>
 
             <div className="pt-4 flex items-center justify-between">
               {ProjectLink ? (

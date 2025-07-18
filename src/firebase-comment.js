@@ -13,7 +13,6 @@ const firebaseConfig = {
   measurementId: "G-K7P9BWYD88",
 };
 
-
 const app = initializeApp(firebaseConfig, "comments-app");
 const db = getFirestore(app);
 const storage = getStorage(app);

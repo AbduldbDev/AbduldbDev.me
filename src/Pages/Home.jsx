@@ -170,7 +170,7 @@ const Home = () => {
 
   // Lottie configuration
   const lottieOptions = {
-    src: "https://lottie.host/58753882-bb6a-49f5-a2c0-950eda1e135a/NLbpVqGegK.lottie",
+    src: "https://lottie.host/7b12aa69-2bc2-4e56-b3f3-9751e1994548/pUuISJdXlr.lottie",
     loop: true,
     autoplay: true,
     rendererSettings: {
@@ -222,8 +222,8 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="1000"
                 >
-                  I'm a web developer passionate about creating functional,
-                  user-friendly websites and applications. I enjoy turning ideas
+                  A web developer passionate about creating functional,
+                  user-friendly websites and applications. Enjoys turning ideas
                   into digital solutions using modern web technologies.
                 </p>
 

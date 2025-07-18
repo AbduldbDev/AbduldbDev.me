@@ -195,9 +195,9 @@ const ProjectDetails = () => {
               </div>
 
               <div className="prose prose-invert max-w-none">
-                <p className="text-base md:text-lg text-gray-300/90 leading-relaxed">
+                <div className="text-base md:text-lg text-gray-300/90 leading-relaxed">
                   {project.Description}
-                </p>
+                </div>
               </div>
 
               <ProjectStats project={project} />

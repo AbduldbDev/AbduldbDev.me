@@ -9,6 +9,7 @@ import Portofolio from "./Pages/Portofolio";
 import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
+import VisitNotifier from "./components/VisitNotifier";
 import { AnimatePresence } from "framer-motion";
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
@@ -22,6 +23,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
 
       {!showWelcome && (
         <>
+          <VisitNotifier />
           <Navbar />
           <AnimatedBackground />
           <Home />
