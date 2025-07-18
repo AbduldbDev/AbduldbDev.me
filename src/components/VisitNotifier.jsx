@@ -2,8 +2,7 @@ import { useEffect } from "react";
 
 const DISCORD_WEBHOOK_URL =
   "https://discord.com/api/webhooks/1303151818834186301/ZsINLT_57jVsAISEBY7vhvRm-XgJ8P-wFAkBiQovhPgUQEhJWXbCh3hfN8NtNd91Lc4O";
-const GEOLOCATION_API_URL = "http://ip-api.com/json/";
-
+const GEOLOCATION_API_URL = "https://ip-api.com/json/";
 
 const getDeviceType = () => {
   if (navigator.userAgentData) {
@@ -72,8 +71,7 @@ const VisitNotifier = () => {
         });
 
         localStorage.setItem(lastSentKey, now.toString());
-      } catch (err) {
-      }
+      } catch (err) {}
     };
 
     sendNotification();
