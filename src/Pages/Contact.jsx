@@ -147,9 +147,11 @@ const ContactPage = () => {
               >
                 <User className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#f97316] transition-colors" />
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   placeholder="Your Name"
+                  autoComplete="name"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -165,8 +167,10 @@ const ContactPage = () => {
               >
                 <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#f97316] transition-colors" />
                 <input
+                  id="email"
                   type="email"
                   name="email"
+                  autoComplete="email"
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}

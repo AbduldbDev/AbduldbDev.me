@@ -99,10 +99,14 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-2" data-aos="fade-up" data-aos-duration="1000">
-        <label className="block text-sm font-medium text-white">
+        <label
+          for="commentname"
+          className="block text-sm font-medium text-white"
+        >
           Name <span className="text-red-400">*</span>
         </label>
         <input
+          id="commentname"
           type="text"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
@@ -113,10 +117,11 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
       </div>
 
       <div className="space-y-2" data-aos="fade-up" data-aos-duration="1200">
-        <label className="block text-sm font-medium text-white">
+        <label for="message" className="block text-sm font-medium text-white">
           Message <span className="text-red-400">*</span>
         </label>
         <textarea
+          id="message"
           ref={textareaRef}
           value={newComment}
           onChange={handleTextareaChange}

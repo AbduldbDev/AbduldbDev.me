@@ -7,7 +7,7 @@ const ThankYouPage = () => {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center">
         <div className="flex justify-center mb-6">
-          <CheckCircle className="w-16 h-16 text-[#6366f1]" />
+          <CheckCircle className="w-16 h-16 text-[#ff6a00]" />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#ff6a00] to-[#ffb347]">
           Thank You!
