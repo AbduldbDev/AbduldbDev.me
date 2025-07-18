@@ -104,8 +104,8 @@ const Navbar = () => {
                   <span
                     className={`relative z-10 transition-colors duration-300 ${
                       activeSection === item.href.substring(1)
-                        ? "bg-gradient-to-r from-[#ff6a00] to-[#ffb347] bg-clip-text text-transparent font-semibold"
-                        : "text-[#e2d3fd] group-hover:text-white"
+                        ? "bg-gradient-to-r from-[#fca85d] to-[#ffe0b2] bg-clip-text text-transparent font-semibold"
+                        : "text-[#f8dac6] hover:text-[#ffe0b2]"
                     }`}
                   >
                     {item.label}
@@ -126,7 +126,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`relative p-2 text-[#e2d3fd] hover:text-white transition-transform duration-300 ease-in-out transform ${
+              className={`relative p-2 text-[#f8dac6] hover:text-[#ffe0b2] transition-transform duration-300 ease-in-out transform ${
                 isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
               }`}
             >
@@ -142,12 +142,11 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`md:hidden h-2/5 fixed inset-0 bg-[#000000] transition-all duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-x-0 top-16 h-[calc(100vh-64px)] bg-[#000000e3] transition-all duration-300 ease-in-out ${
           isOpen
             ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-[-100%] pointer-events-none"
+            : "opacity-0 -translate-y-full pointer-events-none"
         }`}
-        style={{ top: "64px" }}
       >
         <div className="flex flex-col h-full">
           <div className="px-4 py-6 space-y-4 flex-1 ">
@@ -158,8 +157,8 @@ const Navbar = () => {
                 onClick={(e) => scrollToSection(e, item.href)}
                 className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${
                   activeSection === item.href.substring(1)
-                    ? "bg-gradient-to-r from-[#ff6a00] to-[#ffb347] bg-clip-text text-transparent font-semibold"
-                    : "text-[#e2d3fd] hover:text-white"
+                    ? "bg-gradient-to-r from-[#fca85d] to-[#ffe0b2] bg-clip-text text-transparent font-semibold"
+                    : "text-[#f8dac6] hover:text-[#ffe0b2]"
                 }`}
                 style={{
                   transitionDelay: `${index * 100}ms`,
