@@ -71,7 +71,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
         ></polyline>
       </svg>
     </span>
-    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500/50 transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500/50 transition-all duration-300 group-hover:w-full"></span>
   </button>
 );
 
@@ -198,7 +198,7 @@ export default function FullWidthTabs() {
 
   return (
     <div
-      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden"
+      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#000000] overflow-hidden"
       id="Portofolio"
     >
       {/* Header section - unchanged */}
@@ -207,12 +207,12 @@ export default function FullWidthTabs() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+        <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#ff6a00] to-[#ffb347]">
           <span
             style={{
               color: "#6366f1",
               backgroundImage:
-                "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
+                "linear-gradient(45deg, #f97316 10%, #f43f1b 93%)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -247,14 +247,13 @@ export default function FullWidthTabs() {
               right: 0,
               bottom: 0,
               background:
-                "linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%)",
+                "linear-gradient(180deg, rgba(249, 115, 22, 0.05) 0%, rgba(234, 88, 12, 0.05) 100%)",
               backdropFilter: "blur(10px)",
               zIndex: 0,
             },
           }}
           className="md:px-4"
         >
-          {/* Tabs remain unchanged */}
           <Tabs
             value={value}
             onChange={handleChange}
@@ -262,12 +261,11 @@ export default function FullWidthTabs() {
             indicatorColor="secondary"
             variant="fullWidth"
             sx={{
-              // Existing styles remain unchanged
               "minHeight": "70px",
               "& .MuiTab-root": {
                 "fontSize": { xs: "0.9rem", md: "1rem" },
                 "fontWeight": "600",
-                "color": "#94a3b8",
+                "color": "#f97316", // orange
                 "textTransform": "none",
                 "transition": "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                 "padding": "20px 0",
@@ -276,7 +274,7 @@ export default function FullWidthTabs() {
                 "borderRadius": "12px",
                 "&:hover": {
                   "color": "#ffffff",
-                  "backgroundColor": "rgba(139, 92, 246, 0.1)",
+                  "backgroundColor": "rgba(249, 115, 22, 0.1)",
                   "transform": "translateY(-2px)",
                   "& .lucide": {
                     transform: "scale(1.1) rotate(5deg)",
@@ -285,10 +283,10 @@ export default function FullWidthTabs() {
                 "&.Mui-selected": {
                   "color": "#fff",
                   "background":
-                    "linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2))",
-                  "boxShadow": "0 4px 15px -3px rgba(139, 92, 246, 0.2)",
+                    "linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.2))",
+                  "boxShadow": "0 4px 15px -3px rgba(249, 115, 22, 0.2)",
                   "& .lucide": {
-                    color: "#a78bfa",
+                    color: "#f97316",
                   },
                 },
               },

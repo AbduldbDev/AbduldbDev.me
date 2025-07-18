@@ -16,7 +16,7 @@ const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
     <div className="inline-block relative group">
       <h2
-        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]"
+        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff6a00] to-[#ffb347]"
         data-aos="zoom-in-up"
         data-aos-duration="600"
       >
@@ -28,9 +28,9 @@ const Header = memo(() => (
       data-aos="zoom-in-up"
       data-aos-duration="800"
     >
-      <Sparkles className="w-5 h-5 text-purple-400" />
+      <Sparkles className="w-5 h-5 text-orange-400" />
       Turning fiction into function — where imagination meets code.
-      <Sparkles className="w-5 h-5 text-purple-400" />
+      <Sparkles className="w-5 h-5 text-orange-400" />
     </p>
   </div>
 ));
@@ -40,9 +40,9 @@ const ProfileImage = memo(() => (
     <div className="relative group" data-aos="fade-up" data-aos-duration="1000">
       {/* Optimized gradient backgrounds with reduced complexity for mobile */}
       <div className="absolute -inset-6 opacity-[25%] z-0 hidden sm:block">
-        <div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 rounded-full blur-2xl animate-spin-slower" />
-        <div className="absolute inset-0 bg-gradient-to-l from-fuchsia-500 via-rose-500 to-pink-600 rounded-full blur-2xl animate-pulse-slow opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-cyan-500 to-teal-400 rounded-full blur-2xl animate-float opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 rounded-full blur-2xl animate-spin-slower" />
+        <div className="absolute inset-0 bg-gradient-to-l from-orange-400 via-amber-400 to-yellow-400 rounded-full blur-2xl animate-pulse-slow opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-orange-500 via-yellow-400 to-amber-300 rounded-full blur-2xl animate-float opacity-50" />
       </div>
 
       <div className="relative">
@@ -51,7 +51,7 @@ const ProfileImage = memo(() => (
 
           {/* Optimized overlay effects - disabled on mobile */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-0 hidden sm:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 via-transparent to-yellow-400/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
 
           <img
             src="/Photo.jpg"
@@ -178,7 +178,7 @@ const AboutPage = () => {
     () => [
       {
         icon: Code,
-        color: "from-[#6366f1] to-[#a855f7]",
+        color: "from-[#ff6a00] to-[#ffb347]",
         value: totalProjects,
         label: "Total Projects",
         description: "Innovative web solutions crafted",
@@ -186,7 +186,7 @@ const AboutPage = () => {
       },
       {
         icon: Award,
-        color: "from-[#a855f7] to-[#6366f1]",
+        color: "from-[#ff6a00] to-[#ffb347]",
         value: totalCertificates,
         label: "Certificates",
         description: "Professional skills validated",
@@ -194,7 +194,7 @@ const AboutPage = () => {
       },
       {
         icon: Globe,
-        color: "from-[#6366f1] to-[#a855f7]",
+        color: "from-[#ff6a00] to-[#ffb347]",
         value: YearExperience,
         label: "Years of Experience",
         description: "Continuous learning journey",
@@ -219,7 +219,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6a00] to-[#ffb347]">
                 Hello, I'm
               </span>
               <span
@@ -254,7 +254,7 @@ const AboutPage = () => {
                 <button
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#ff6a00] to-[#ffb347] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
                 >
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                 </button>
@@ -263,9 +263,10 @@ const AboutPage = () => {
                 <button
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-orange-500/50 text-orange-500 font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-orange-500/10 animate-bounce-slow delay-200"
                 >
-                  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
+                  <Code className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />{" "}
+                  View Projects
                 </button>
               </a>
             </div>
