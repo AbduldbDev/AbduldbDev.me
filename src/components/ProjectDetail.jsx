@@ -13,6 +13,7 @@ import {
   Package,
   Cpu,
   Code,
+  Database,
 } from "lucide-react";
 import Swal from "sweetalert2";
 
@@ -24,6 +25,9 @@ const TECH_ICONS = {
   Javascript: Code,
   HTML: Code,
   CSS: Code,
+  MySQL: Database,
+  Firebase: Database,
+  JSON: Database,
   default: Package,
 };
 

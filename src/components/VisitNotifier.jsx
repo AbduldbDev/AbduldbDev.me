@@ -50,17 +50,17 @@ const VisitNotifier = () => {
 
         const deviceType = getDeviceType();
 
-        const message = {
-          content: `🟢 **New Visitor Alert**
+const message = {
+  content: `🟢 **New Visitor Alert**
 
 **Date & Time:** ${nowFormatted}
-**IP:** ${data.query}
-**Country:** ${data.country}
-**Region:** ${data.regionName}
+**IP:** ${data.ip}
+**Country:** ${data.country_name}
+**Region:** ${data.region}
 **City:** ${data.city}
-**ISP:** ${data.isp}
+**ISP:** ${data.org}
 **Device:** ${deviceType}`,
-        };
+};
 
         await fetch(DISCORD_WEBHOOK_URL, {
           method: "POST",

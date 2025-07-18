@@ -244,6 +244,28 @@ const AboutPage = () => {
               responsive and reliable web applications that bring concepts to
               life.
             </p>
+            <div
+              class="relative bg-gradient-to-br from-[#fca85d]/5 via-transparent to-[#ffb347]/5 border border-gradient-to-r border-[#fca85d]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="1700"
+            >
+              <div class="absolute top-2 right-4 w-16 h-16 bg-gradient-to-r from-[#fca85d]/20 to-[#ffb347]/20 rounded-full blur-xl"></div>
+              <div class="absolute -bottom-4 -left-2 w-12 h-12 bg-gradient-to-r from-[#ffb347]/20 to-[#fca85d]/20 rounded-full blur-lg"></div>
+              <div class="absolute top-3 left-4 text-[#fca85d] opacity-30">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"></path>
+                </svg>
+              </div>
+              <blockquote class="text-[#fca85d] text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
+                "Code is like a humor. When you have to explain it, it’s bad." -
+                Cory House
+              </blockquote>
+            </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
               <a

@@ -115,7 +115,7 @@ const SOCIAL_LINKS = [
   },
   {
     icon: MessageSquare,
-    link: "https://discordid.netlify.app/?id=567953189450678273",
+    link: "https://discord.gg/VXkkPKU5d5",
   },
 ];
 
