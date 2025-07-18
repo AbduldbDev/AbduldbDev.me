@@ -126,6 +126,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
               className={`relative p-2 text-[#f8dac6] hover:text-[#ffe0b2] transition-transform duration-300 ease-in-out transform ${
                 isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
               }`}
