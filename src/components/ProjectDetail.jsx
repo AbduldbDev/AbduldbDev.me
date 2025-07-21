@@ -54,7 +54,7 @@ const FeatureItem = ({ feature }) => {
         <div className="absolute -inset-1 bg-gradient-to-r from-orange-400/20 to-yellow-400/20 rounded-full blur group-hover:opacity-100 opacity-0 transition-opacity duration-300" />
         <div className="relative w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-orange-400 to-yellow-400 group-hover:scale-125 transition-transform duration-300" />
       </div>
-      <span className="text-sm md:text-base text-orange-200 group-hover:text-white transition-colors">
+      <span className="text-sm md:text-base text-gray-200/90 group-hover:text-white transition-colors">
         {feature}
       </span>
     </li>
@@ -105,17 +105,32 @@ const ProjectStats = ({ project }) => {
     </div>
   );
 };
+const handleLiveClick = (Link) => {
+  if (Link === "None") {
+    Swal.fire({
+      icon: "warning",
+      title: "No Demo Available",
+      text: "A demo link is currently not available.",
+      confirmButtonText: "Close",
+      confirmButtonColor: "#f97316",
+      background: "#130c01",
+      color: "#b45911",
+    });
+    return false;
+  }
+  return true;
+};
 
 const handleGithubClick = (githubLink) => {
   if (githubLink === "Private") {
     Swal.fire({
-      icon: "info",
+      icon: "warning",
       title: "Source Code Private",
       text: "Source Code is currently private.",
-      confirmButtonText: "Mengerti",
+      confirmButtonText: "Close",
       confirmButtonColor: "#f97316",
-      background: "#0a0a1a",
-      color: "#fef3c7",
+      background: "#130c01",
+      color: "#b45911",
     });
     return false;
   }
@@ -213,6 +228,9 @@ const ProjectDetails = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center space-x-1.5 md:space-x-2 px-4 md:px-8 py-2.5 md:py-4 bg-gradient-to-r from-orange-500/10 to-orange-700/10 hover:from-orange-500/20 hover:to-orange-700/20 text-orange-300 rounded-xl transition-all duration-300 border border-orange-500/20 hover:border-orange-500/40 backdrop-blur-xl overflow-hidden text-sm md:text-base"
+                  onClick={(e) =>
+                    !handleLiveClick(project.Link) && e.preventDefault()
+                  }
                 >
                   <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-orange-500/10 to-orange-700/10 transition-transform duration-300 group-hover:translate-y-[0%]" />
                   <ExternalLink className="relative w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
@@ -265,14 +283,13 @@ const ProjectDetails = () => {
                 <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
               </div>
 
-              {/* Fitur Utama */}
               <div className="bg-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-orange-300/40 space-y-6 hover:border-white/20 transition-colors duration-300 group">
                 <h3 className="text-xl font-semibold text-white/90 flex items-center gap-3">
                   <Star className="w-5 h-5 text-orange-400 group-hover:rotate-[20deg] transition-transform duration-300" />
                   Key Features
                 </h3>
                 {project.Features.length > 0 ? (
-                  <ul className="list-none space-y-2">
+                  <ul className="list-none space-y-2 text-gray-200/90">
                     {project.Features.map((feature, index) => (
                       <FeatureItem key={index} feature={feature} />
                     ))}

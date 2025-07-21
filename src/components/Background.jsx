@@ -15,7 +15,6 @@ const AnimatedBackground = () => {
 
     const handleScroll = () => {
       const newScroll = window.pageYOffset;
-      // eslint-disable-next-line no-unused-vars
       const scrollDelta = newScroll - currentScroll;
       currentScroll = newScroll;
 

@@ -19,7 +19,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
 
   return (
     <div className="group relative w-full">
-      <div className="relative overflow-hidden rounded-xl bg-orange-500/5 backdrop-blur-md border border-orange-200/10 shadow-xl hover:shadow-orange-400/30 transition-all duration-300">
+      <div className="relative overflow-hidden rounded-xl bg-orange-500/5 backdrop-blur-md border border-orange-200/10 shadow-xl hover:shadow-orange-400/10 transition-all duration-300">
         {/* Glow Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-orange-500/10 to-yellow-400/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
 
@@ -42,7 +42,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
             </div>
 
             <div className="pt-4 flex items-center justify-between">
-              {ProjectLink ? (
+              {ProjectLink !== "None" ? (
                 <a
                   href={ProjectLink}
                   target="_blank"
