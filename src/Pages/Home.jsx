@@ -105,7 +105,7 @@ const PAUSE_DURATION = 2000;
 const WORDS = ["BS Information Technology Student", "Junior Web Developer"];
 const TECH_STACK = ["Laravel", "React", "Nextjs", "Bootsrap"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/AbdulDeBorja09" },
+  { icon: Github, link: "https://github.com/AbduldbDev" },
   {
     icon: Linkedin,
     link: "https://www.linkedin.com/in/abdul-de-borja-28aabb293/",

@@ -21,9 +21,9 @@ const socialLinks = [
   {
     name: "GitHub",
     displayName: "Github",
-    subText: "@AbdulDeBorja09",
+    subText: "@AbduldbDev",
     icon: Github,
-    url: "https://github.com/AbdulDeBorja09",
+    url: "https://github.com/AbduldbDev",
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]",
   },
