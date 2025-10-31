@@ -1,4 +1,4 @@
-import React, { useEffect, memo, useMemo } from "react";
+import React, { useEffect, memo, useMemo, useState } from "react";
 import {
   FileText,
   Code,
@@ -10,8 +10,12 @@ import {
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { db, collection } from "../firebase";
+import { getDocs } from "firebase/firestore";
 
-// Memoized Components
+const projectCollection = collection(db, "projects");
+const certificateCollection = collection(db, "certificates");
+
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
     <div className="inline-block relative group">
@@ -125,13 +129,22 @@ const StatCard = memo(
 );
 
 const AboutPage = () => {
-  // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(
-      localStorage.getItem("certificates") || "[]"
-    );
+  const [projects, setProjects] = useState([]);
+  const [certificates, setCertificates] = useState([]);
 
+  useEffect(() => {
+    const fetchFirestoreData = async () => {
+      const projSnap = await getDocs(projectCollection);
+      setProjects(projSnap.docs.map((doc) => doc.data()));
+
+      const certSnap = await getDocs(certificateCollection);
+      setCertificates(certSnap.docs.map((doc) => doc.data()));
+    };
+
+    fetchFirestoreData();
+  }, []);
+
+  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     const startDate = new Date("2023-05-01");
     const today = new Date();
     const experience =
@@ -143,11 +156,11 @@ const AboutPage = () => {
         : 0);
 
     return {
-      totalProjects: storedProjects.length,
-      totalCertificates: storedCertificates.length,
+      totalProjects: projects.length,
+      totalCertificates: certificates.length,
       YearExperience: experience,
     };
-  }, []);
+  }, [projects, certificates]);
 
   // Optimized AOS initialization
   useEffect(() => {
