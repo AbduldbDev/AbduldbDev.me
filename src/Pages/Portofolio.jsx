@@ -165,7 +165,6 @@ export default function FullWidthTabs() {
       setProjects(projectData);
       setCertificates(certificateData);
 
-      // Store in localStorage
       localStorage.setItem("projects", JSON.stringify(projectData));
       localStorage.setItem("certificates", JSON.stringify(certificateData));
     } catch (error) {
@@ -192,6 +191,7 @@ export default function FullWidthTabs() {
   const displayedProjects = showAllProjects
     ? projects
     : projects.slice(0, initialItems);
+
   const displayedCertificates = showAllCertificates
     ? certificates
     : certificates.slice(0, initialItems);

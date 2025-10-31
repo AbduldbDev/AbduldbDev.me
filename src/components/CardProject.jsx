@@ -19,9 +19,9 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
 
   return (
     <div className="group relative w-full">
-      <div className="relative overflow-hidden rounded-xl bg-orange-500/5 backdrop-blur-md border border-orange-200/10 shadow-xl hover:shadow-orange-400/10 transition-all duration-300">
+      <div className="relative overflow-hidden rounded-xl bg-gray-500/5 backdrop-blur-md border border-gray-200/10 shadow-xl hover:shadow-orange-400/10 transition-all duration-300">
         {/* Glow Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-orange-500/10 to-yellow-400/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/5 via-orange-500/5 to-yellow-400/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
 
         <div className="relative p-5 z-10">
           <div className="relative overflow-hidden rounded-lg">

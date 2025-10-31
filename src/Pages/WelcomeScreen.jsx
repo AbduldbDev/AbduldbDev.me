@@ -31,8 +31,8 @@ const TypewriterEffect = ({ text }) => {
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-amber-500/20 blur-3xl animate-pulse" />
-    <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/10 via-transparent to-yellow-500/10 blur-2xl animate-float" />
+    <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-amber-500/10 blur-3xl animate-pulse" />
+    <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/5 via-transparent to-yellow-500/5 blur-2xl animate-float" />
   </div>
 );
 

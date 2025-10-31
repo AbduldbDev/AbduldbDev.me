@@ -108,7 +108,7 @@ const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/AbduldbDev" },
   {
     icon: Linkedin,
-    link: "https://www.linkedin.com/in/abdul-de-borja-28aabb293/",
+    link: "https://www.linkedin.com/in/abduldbdev",
   },
   {
     icon: MessageSquare,
