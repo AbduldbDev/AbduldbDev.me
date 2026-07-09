@@ -1,61 +1,699 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="dark" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Photo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="google-site-verification"
-      content="F36J9lmy_mcn4U-V4FJ8qAuP7UJE1Hr2PKzJdLeK_9M"
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dspeed Cargo PH | Project Case Study</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
     />
-    
-    <link rel="canonical" href="https://abduldbdev.vercel.app" />
-    <meta
-      name="keywords"
-      content="Abdul Aziz, AbduldbDev, Abdul Aziz A. De Borja, Web Developer, Fullstack Developer, Laravel Developer, abduldbdev, abduldev"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
     />
-
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta
-      name="title"
-      content="Abdul Aziz A. De Borja - Front-End Web Developer Profile"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
     />
-    <meta
-      name="description"
-      content="Welcome to my website! I'm Abdul Aziz A. De Borja, a passionate web developer focused on building responsive and engaging user interfaces. Discover more about my work and projects here."
-    />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://AbduldbDev.vercel.app/" />
-    <meta property="og:title" content="AbduldbDev - Abdul Aziz A. De Borja" />
-    <meta
-      property="og:description"
-      content="Welcome to my website! I'm Abdul Aziz A. De Borja, a passionate web developer focused on building responsive and engaging user interfaces. Discover more about my work and projects here."
-    />
-
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://AbduldbDev.vercel.app/" />
-    <meta
-      property="twitter:title"
-      content="AbduldbDev - Abdul Aziz A. De Borja"
-    />
-    <meta
-      property="twitter:description"
-      content="Welcome to my website! I'm Abdul Aziz A. De Borja, a passionate web developer focused on building responsive and engaging user interfaces. Discover more about my work and projects here."
-    />
-
-    <meta name="theme-color" content="rgb(3,0,20)" />
-    <meta name="msapplication-navbutton-color" content="rgb(3,0,20)" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-
-    <title>AbduldbDev - Fullstack Developer</title>
+    <style>
+      body {
+        background-color: #000000;
+        color: #f4f4f5;
+        overflow-x: hidden;
+      }
+      .glass-card {
+        background: rgba(24, 24, 27, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid #2e2e33;
+      }
+      .tech-chip {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid #2e2e33;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .tech-chip:hover {
+        border-color: #adc6ff;
+        background: rgba(173, 198, 255, 0.05);
+        transform: translateY(-2px);
+      }
+      .hero-gradient {
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(173, 198, 255, 0.08) 0%,
+          transparent 70%
+        );
+      }
+      .hairline-y {
+        position: relative;
+      }
+      .hairline-y::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #2e2e33;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#b7c8e1",
+              "error-container": "#93000a",
+              "inverse-on-surface": "#313032",
+              "primary-fixed": "#d8e2ff",
+              "on-secondary-fixed-variant": "#38485d",
+              "surface-dim": "#131315",
+              "on-tertiary": "#00315d",
+              "surface-card": "#18181b",
+              primary: "#adc6ff",
+              "text-primary": "#f4f4f5",
+              "on-surface": "#e5e1e4",
+              surface: "#131315",
+              outline: "#8c909f",
+              warning: "#f59e0b",
+              "on-primary": "#002e6a",
+              "border-hairline": "#2e2e33",
+              "primary-fixed-dim": "#adc6ff",
+              "text-muted": "#71717a",
+              "on-primary-fixed-variant": "#004395",
+              "primary-container": "#4d8eff",
+              "surface-tint": "#adc6ff",
+              "surface-variant": "#353437",
+              "surface-container-highest": "#353437",
+              "on-background": "#e5e1e4",
+              "outline-variant": "#424754",
+              "on-tertiary-fixed-variant": "#004883",
+              "inverse-primary": "#005ac2",
+              background: "#131315",
+              "on-primary-fixed": "#001a42",
+              "on-tertiary-fixed": "#001c39",
+              "on-secondary-container": "#a9bad3",
+              "surface-container-lowest": "#0e0e10",
+              "on-primary-container": "#00285d",
+              "surface-elevated": "#27272a",
+              secondary: "#b7c8e1",
+              "tertiary-fixed": "#d4e3ff",
+              "tertiary-container": "#4c93e7",
+              "tertiary-fixed-dim": "#a4c9ff",
+              "on-secondary": "#213145",
+              "on-error": "#690005",
+              error: "#ef4444",
+              "text-secondary": "#a1a1aa",
+              "surface-container-high": "#2a2a2c",
+              "surface-bright": "#39393b",
+              "on-tertiary-container": "#002a51",
+              "surface-container-low": "#1c1b1d",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed": "#0b1c30",
+              success: "#10b981",
+              "secondary-fixed": "#d3e4fe",
+              "surface-container": "#201f22",
+              "inverse-surface": "#e5e1e4",
+              canvas: "#000000",
+              tertiary: "#a4c9ff",
+              "on-surface-variant": "#c2c6d6",
+              "secondary-container": "#3a4a5f",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "margin-mobile": "20px",
+              "margin-desktop": "80px",
+              unit: "8px",
+              "card-padding": "32px",
+              "section-gap": "120px",
+            },
+            fontFamily: {
+              "headline-sm": ["Poppins"],
+              "display-lg": ["Poppins"],
+              "body-lg": ["Poppins"],
+              "label-caps": ["Poppins"],
+              "headline-md": ["Poppins"],
+              "display-lg-mobile": ["Poppins"],
+              "body-base": ["Poppins"],
+            },
+            fontSize: {
+              "headline-sm": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "72px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-md": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-lg-mobile": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-base": ["16px", { lineHeight: "26px", fontWeight: "300" }],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="bg-canvas text-text-primary selection:bg-primary/30">
+    <!-- TopNavBar (Shared Component) -->
+    <nav
+      class="fixed top-0 w-full h-16 bg-canvas/70 dark:bg-canvas/70 border-b border-border-hairline backdrop-blur-xl z-50"
+    >
+      <div
+        class="flex justify-between items-center h-16 px-gutter max-w-[1280px] mx-auto w-full"
+      >
+        <div
+          class="font-headline-sm text-headline-sm font-bold text-primary tracking-tighter"
+        >
+          AbduldbDev
+        </div>
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="font-label-caps text-label-caps text-text-secondary hover:text-text-primary transition-colors"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-text-secondary hover:text-text-primary transition-colors"
+            href="#"
+            >About</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1"
+            href="#"
+            >Projects</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-text-secondary hover:text-text-primary transition-colors"
+            href="#"
+            >Contact</a
+          >
+          <button
+            class="ml-4 px-6 py-2 border border-primary text-primary font-label-caps text-label-caps rounded hover:scale-105 transition-transform duration-200 active:scale-95"
+          >
+            Resume
+          </button>
+        </div>
+        <div class="md:hidden">
+          <span class="material-symbols-outlined text-primary">menu</span>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-16">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[90vh] flex flex-col items-center justify-center px-gutter hero-gradient overflow-hidden"
+      >
+        <div
+          class="max-w-[1280px] w-full text-center z-10 transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <div
+            class="mb-6 inline-block px-3 py-1 border border-success/30 bg-success/5 rounded-full font-label-caps text-label-caps text-success tracking-widest uppercase"
+          >
+            Commission
+          </div>
+          <h1
+            class="font-display-lg text-display-lg-mobile md:text-display-lg text-text-primary mb-6"
+          >
+            Dspeed Cargo PH
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto mb-10"
+          >
+            A comprehensive logistics ecosystem engineered to streamline freight
+            operations, inventory tracking, and client transparency for the
+            Philippine market.
+          </p>
+          <div class="flex flex-col md:flex-row justify-center gap-4 mb-20">
+            <a
+              class="px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded font-bold hover:scale-105 transition-all flex items-center justify-center gap-2"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >rocket_launch</span
+              >
+              Live Demo
+            </a>
+            <a
+              class="px-8 py-4 border border-border-hairline text-text-primary font-label-caps text-label-caps rounded hover:border-primary transition-all flex items-center justify-center gap-2"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[18px]">code</span>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+        <!-- Hero Image Container -->
+        <div
+          class="w-full max-w-[1100px] mx-auto px-gutter animate-reveal transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <div
+            class="relative rounded-xl overflow-hidden border border-border-hairline shadow-2xl group"
+          >
+            <img
+              class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-700"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5g5kfb7ggZb2Wd7uW3HUIMs2Jm0ynVr9-QEoouWtOozZ9qkDSI9Tnp8dyx9glzGiFB55fv5Gl9uDLMmkJyDW5AMb4D3oCLX1fP0UN-u2QVTSdsm-68MkKYUoqkzF3p0sxhJkfFZrCsMhKN3AStvpApyskAnUqcTsPPMYVRF6c26Ifs96CA61V521ACwyExf7LKyD6F-uOJkNmtD0Fbb7FQAu67wS5Y45k8TMGdoWxEiUBg7_DOho0yXXL7dVZTjgDj9GtGFgCujvh"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent opacity-40"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Overview & The Problem (Bento Style) -->
+      <section class="py-section-gap px-gutter max-w-[1280px] mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-gutter transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <!-- Overview -->
+          <div
+            class="md:col-span-7 glass-card p-card-padding rounded-xl flex flex-col justify-center"
+          >
+            <h2 class="font-headline-md text-headline-md mb-6 text-primary">
+              Overview
+            </h2>
+            <p
+              class="font-body-base text-body-base text-text-secondary mb-4 leading-relaxed"
+            >
+              Dspeed Cargo PH was conceptualized to address the growing
+              complexities in the domestic logistics sector. As a full-stack
+              solution, it serves as the backbone for cargo handling, from the
+              moment a package enters the warehouse to its final mile delivery.
+            </p>
+            <p
+              class="font-body-base text-body-base text-text-secondary leading-relaxed"
+            >
+              The architecture focuses on high-availability and real-time data
+              synchronization, ensuring that both administrative staff and
+              customers have access to the exact status of their shipments
+              without latency.
+            </p>
+          </div>
+          <!-- Problem Stat -->
+          <div
+            class="md:col-span-5 bg-surface-card border border-border-hairline p-card-padding rounded-xl flex flex-col"
+          >
+            <div class="text-error mb-4">
+              <span class="material-symbols-outlined text-[40px]">warning</span>
+            </div>
+            <h2 class="font-headline-sm text-headline-sm mb-4">The Problem</h2>
+            <ul
+              class="space-y-4 font-body-base text-body-base text-text-secondary"
+            >
+              <li class="flex gap-3">
+                <span
+                  class="text-error mt-1 material-symbols-outlined text-[16px]"
+                  >close</span
+                >
+                Manual tracking spreadsheets leading to data inconsistencies.
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-error mt-1 material-symbols-outlined text-[16px]"
+                  >close</span
+                >
+                Zero visibility for clients regarding shipment progress.
+              </li>
+              <li class="flex gap-3">
+                <span
+                  class="text-error mt-1 material-symbols-outlined text-[16px]"
+                  >close</span
+                >
+                Inefficient warehouse inventory management causing delays.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- The Solution (Technical Highlight) -->
+      <section
+        class="py-section-gap bg-surface-container-lowest relative overflow-hidden"
+      >
+        <div
+          class="max-w-[1280px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <div>
+            <h2 class="font-headline-md text-headline-md mb-8">The Solution</h2>
+            <p class="font-body-base text-body-base text-text-secondary mb-6">
+              We engineered a robust platform leveraging the power of
+              <span class="text-primary font-bold">Laravel</span> for a secure,
+              scalable backend and
+              <span class="text-primary font-bold">React</span> for a dynamic,
+              lightning-fast user interface.
+            </p>
+            <div class="space-y-8">
+              <div class="flex flex-col gap-4">
+                <div
+                  class="flex items-center gap-4 p-4 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >check_circle</span
+                  >
+                  <div>
+                    <span class="font-headline-sm text-[18px] text-text-primary"
+                      >Centralized Architecture</span
+                    >
+                    <p class="text-body-base text-text-muted text-[14px]">
+                      Unified MySQL database ensuring ACID compliance for every
+                      transaction.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 p-4 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >check_circle</span
+                  >
+                  <div>
+                    <span class="font-headline-sm text-[18px] text-text-primary"
+                      >Live State Updates</span
+                    >
+                    <p class="text-body-base text-text-muted text-[14px]">
+                      React Context and Webhooks for instantaneous dashboard
+                      synchronization.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 p-4 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >check_circle</span
+                  >
+                  <div>
+                    <span class="font-headline-sm text-[18px] text-text-primary"
+                      >Scalable Backend</span
+                    >
+                    <p class="text-body-base text-text-muted text-[14px]">
+                      Robust Laravel-powered API designed for high-concurrency
+                      logistics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full"
+            ></div>
+            <div
+              class="relative glass-card p-4 rounded-xl rotate-2 border-primary/30"
+            >
+              <div
+                class="flex items-center gap-2 mb-4 border-b border-border-hairline pb-2"
+              >
+                <div class="w-3 h-3 rounded-full bg-error"></div>
+                <div class="w-3 h-3 rounded-full bg-warning"></div>
+                <div class="w-3 h-3 rounded-full bg-success"></div>
+                <span
+                  class="ml-4 font-label-caps text-label-caps text-text-muted"
+                  >app/Services/ShipmentTracker.php</span
+                >
+              </div>
+              <pre
+                class="text-[12px] font-mono text-secondary-fixed-dim leading-relaxed"
+              >
+public function updateStatus(Request $request) {
+    $shipment = Shipment::findOrFail($request-&gt;id);
+    $shipment-&gt;update([
+        'status' =&gt; $request-&gt;status,
+        'location' =&gt; $request-&gt;coords,
+        'updated_at' =&gt; now()
+    ]);
+
+    event(new ShipmentMoved($shipment));
+    return response()-&gt;json($shipment);
+}
+                        </pre
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Key Features (Asymmetric Grid) -->
+      <section class="py-section-gap px-gutter max-w-[1280px] mx-auto">
+        <h2 class="font-headline-md text-headline-md mb-12 text-center">
+          Core Functionality
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <div
+            class="group p-8 border border-border-hairline rounded-xl hover:border-primary/50 transition-colors"
+          >
+            <span
+              class="material-symbols-outlined text-primary text-[40px] mb-6"
+              >location_on</span
+            >
+            <h3 class="font-headline-sm text-headline-sm mb-4">
+              Real-time Tracking
+            </h3>
+            <p class="font-body-base text-body-base text-text-secondary">
+              GPS-integrated maps providing exact coordinates of cargo vehicles
+              and estimated arrival times for end-users.
+            </p>
+          </div>
+          <div
+            class="group p-8 border border-border-hairline rounded-xl hover:border-primary/50 transition-colors"
+          >
+            <span
+              class="material-symbols-outlined text-primary text-[40px] mb-6"
+              >inventory_2</span
+            >
+            <h3 class="font-headline-sm text-headline-sm mb-4">
+              Inventory Engine
+            </h3>
+            <p class="font-body-base text-body-base text-text-secondary">
+              Automated stock auditing with low-threshold alerts and visual
+              storage mapping for warehouse staff.
+            </p>
+          </div>
+          <div
+            class="group p-8 border border-border-hairline rounded-xl hover:border-primary/50 transition-colors"
+          >
+            <span
+              class="material-symbols-outlined text-primary text-[40px] mb-6"
+              >dashboard_customize</span
+            >
+            <h3 class="font-headline-sm text-headline-sm mb-4">Adaptive UI</h3>
+            <p class="font-body-base text-body-base text-text-secondary">
+              A fully responsive dashboard that tailors complex data
+              visualizations for mobile handhelds and ultra-wide monitors.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Tech Stack -->
+      <section class="py-section-gap bg-surface-container">
+        <div
+          class="max-w-[1280px] mx-auto px-gutter text-center transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <h2
+            class="font-label-caps text-label-caps text-text-muted mb-12 uppercase tracking-widest"
+          >
+            Built with precision using
+          </h2>
+          <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+            <div
+              class="px-6 py-3 bg-surface-card border border-border-hairline rounded-full flex items-center gap-3 hover:border-primary/50 transition-all group"
+            >
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >php</span
+              >
+              <span class="font-label-caps text-label-caps tracking-widest"
+                >Laravel</span
+              >
+            </div>
+            <div
+              class="px-6 py-3 bg-surface-card border border-border-hairline rounded-full flex items-center gap-3 hover:border-primary/50 transition-all group"
+            >
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >deployed_code</span
+              >
+              <span class="font-label-caps text-label-caps tracking-widest"
+                >React</span
+              >
+            </div>
+            <div
+              class="px-6 py-3 bg-surface-card border border-border-hairline rounded-full flex items-center gap-3 hover:border-primary/50 transition-all group"
+            >
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >database</span
+              >
+              <span class="font-label-caps text-label-caps tracking-widest"
+                >MySQL</span
+              >
+            </div>
+            <div
+              class="px-6 py-3 bg-surface-card border border-border-hairline rounded-full flex items-center gap-3 hover:border-primary/50 transition-all group"
+            >
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >css</span
+              >
+              <span class="font-label-caps text-label-caps tracking-widest"
+                >Tailwind CSS</span
+              >
+            </div>
+            <div
+              class="px-6 py-3 bg-surface-card border border-border-hairline rounded-full flex items-center gap-3 hover:border-primary/50 transition-all group"
+            >
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >terminal</span
+              >
+              <span class="font-label-caps text-label-caps tracking-widest"
+                >Redis</span
+              >
+            </div>
+            <div
+              class="px-6 py-3 bg-surface-card border border-border-hairline rounded-full flex items-center gap-3 hover:border-primary/50 transition-all group"
+            >
+              <span class="material-symbols-outlined text-primary text-[20px]"
+                >monitoring</span
+              >
+              <span class="font-label-caps text-label-caps tracking-widest"
+                >Sentry</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Image Gallery -->
+      <section class="py-section-gap px-gutter max-w-[1280px] mx-auto">
+        <h2 class="font-headline-md text-headline-md mb-12">
+          Interface Exploration
+        </h2>
+        <div
+          class="columns-1 md:columns-2 gap-8 space-y-8 transition-all duration-1000 opacity-100 translate-y-0"
+        >
+          <div
+            class="rounded-xl overflow-hidden border border-border-hairline group"
+          >
+            <img
+              class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5g5kfb7ggZb2Wd7uW3HUIMs2Jm0ynVr9-QEoouWtOozZ9qkDSI9Tnp8dyx9glzGiFB55fv5Gl9uDLMmkJyDW5AMb4D3oCLX1fP0UN-u2QVTSdsm-68MkKYUoqkzF3p0sxhJkfFZrCsMhKN3AStvpApyskAnUqcTsPPMYVRF6c26Ifs96CA61V521ACwyExf7LKyD6F-uOJkNmtD0Fbb7FQAu67wS5Y45k8TMGdoWxEiUBg7_DOho0yXXL7dVZTjgDj9GtGFgCujvh"
+            />
+          </div>
+          <div
+            class="rounded-xl overflow-hidden border border-border-hairline group"
+          >
+            <img
+              class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5g5kfb7ggZb2Wd7uW3HUIMs2Jm0ynVr9-QEoouWtOozZ9qkDSI9Tnp8dyx9glzGiFB55fv5Gl9uDLMmkJyDW5AMb4D3oCLX1fP0UN-u2QVTSdsm-68MkKYUoqkzF3p0sxhJkfFZrCsMhKN3AStvpApyskAnUqcTsPPMYVRF6c26Ifs96CA61V521ACwyExf7LKyD6F-uOJkNmtD0Fbb7FQAu67wS5Y45k8TMGdoWxEiUBg7_DOho0yXXL7dVZTjgDj9GtGFgCujvh"
+            />
+          </div>
+          <div
+            class="rounded-xl overflow-hidden border border-border-hairline group"
+          >
+            <img
+              class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5g5kfb7ggZb2Wd7uW3HUIMs2Jm0ynVr9-QEoouWtOozZ9qkDSI9Tnp8dyx9glzGiFB55fv5Gl9uDLMmkJyDW5AMb4D3oCLX1fP0UN-u2QVTSdsm-68MkKYUoqkzF3p0sxhJkfFZrCsMhKN3AStvpApyskAnUqcTsPPMYVRF6c26Ifs96CA61V521ACwyExf7LKyD6F-uOJkNmtD0Fbb7FQAu67wS5Y45k8TMGdoWxEiUBg7_DOho0yXXL7dVZTjgDj9GtGFgCujvh"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Footer (Shared Component) -->
+      <footer
+        class="w-full py-section-gap border-t border-border-hairline bg-canvas"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-[1280px] mx-auto w-full"
+        >
+          <div
+            class="font-headline-sm text-headline-sm text-primary mb-6 md:mb-0"
+          >
+            AbduldbDev
+          </div>
+          <div class="flex flex-col items-center md:items-end gap-4">
+            <div class="flex gap-6">
+              <a
+                class="font-body-base text-body-base text-text-muted hover:text-primary transition-colors"
+                href="#"
+                >GitHub</a
+              >
+              <a
+                class="font-body-base text-body-base text-text-muted hover:text-primary transition-colors"
+                href="#"
+                >LinkedIn</a
+              >
+              <a
+                class="font-body-base text-body-base text-text-muted hover:text-primary transition-colors"
+                href="#"
+                >Twitter</a
+              >
+              <a
+                class="font-body-base text-body-base text-text-muted hover:text-primary transition-colors"
+                href="#"
+                >Email</a
+              >
+            </div>
+            <p class="font-body-base text-body-base text-text-muted opacity-60">
+              © 2024 AbduldbDev. Built with precision.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script>
+      // Simple Intersection Observer for reveal animations
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section > div").forEach((el) => {
+        el.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-10",
+        );
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
