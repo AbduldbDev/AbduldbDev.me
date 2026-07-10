@@ -115,32 +115,49 @@ export default function ProjectDetails() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 sm:px-8 py-2 sm:py-4 bg-primary text-on-primary font-label-caps text-label-caps-xs sm:text-label-caps rounded font-bold hover:scale-105 transition-all flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-[18px]">
-                  rocket_launch
-                </span>
-                Live Demo
-              </a>
-            )}
-            {project.projectUrl && (
-              <a
-                href={project.projectUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 sm:px-8 py-2 sm:py-4 border border-border-hairline text-text-primary font-label-caps text-label-caps-xs sm:text-label-caps rounded hover:border-primary transition-all flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-[18px]">
-                  code
-                </span>
-                View on GitHub
-              </a>
-            )}
+            <a
+              href={
+                project.demoUrl && project.demoUrl !== "None"
+                  ? project.demoUrl
+                  : undefined
+              }
+              target={project.demoUrl !== "None" ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className={`px-6 sm:px-8 py-2 sm:py-4 font-label-caps text-label-caps-xs sm:text-label-caps rounded font-bold transition-all flex items-center justify-center gap-2 ${
+                project.demoUrl && project.demoUrl !== "None"
+                  ? "bg-primary text-on-primary hover:scale-105"
+                  : "bg-surface-card text-text-muted border border-border-hairline cursor-not-allowed"
+              }`}
+            >
+              <span className="material-symbols-outlined text-[18px]">
+                rocket_launch
+              </span>
+              {project.demoUrl && project.demoUrl !== "None"
+                ? "Live Demo"
+                : "Demo Unavailable"}
+            </a>
+
+            <a
+              href={
+                project.projectUrl && project.projectUrl !== "Private"
+                  ? project.projectUrl
+                  : undefined
+              }
+              target={project.projectUrl !== "Private" ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className={`px-6 sm:px-8 py-2 sm:py-4 font-label-caps text-label-caps-xs sm:text-label-caps rounded transition-all flex items-center justify-center gap-2 ${
+                project.projectUrl && project.projectUrl !== "Private"
+                  ? "border border-border-hairline text-text-primary hover:border-primary"
+                  : "border border-border-hairline text-text-muted cursor-not-allowed"
+              }`}
+            >
+              <span className="material-symbols-outlined text-[18px]">
+                code
+              </span>
+              {project.projectUrl && project.projectUrl !== "Private"
+                ? "View on GitHub"
+                : "Source Private"}
+            </a>
           </div>
         </div>
 

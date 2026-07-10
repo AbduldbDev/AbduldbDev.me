@@ -6,11 +6,11 @@ import { fetchProjects } from "@/data/projects";
 
 const filters = [
   { key: "all", label: "All Projects" },
-  { key: "Commission", label: "Commission" },
-  { key: "Mini", label: "Mini" },
-  { key: "Personal", label: "Personal" },
-  { key: "Academic", label: "Academic" },
-  { key: "Competition", label: "Competition" },
+  { key: "commission", label: "Commission" },
+  { key: "mini", label: "Mini" },
+  { key: "personal", label: "Personal" },
+  { key: "academic", label: "Academic" },
+  { key: "competition", label: "Competition" },
 ];
 
 export default function ProjectsPage() {
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
   }, []);
 
   const filtered =
-    active === "all" ? projects : projects.filter((p) => p.Category === active);
+    active === "all" ? projects : projects.filter((p) => p.category === active);
 
   return (
     <main className="max-w-7xl mx-auto px-5 sm:px-6 md:px-margin-desktop py-16 sm:py-24 lg:py-30">

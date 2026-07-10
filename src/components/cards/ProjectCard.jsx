@@ -1,8 +1,9 @@
 "use client";
+import Link from "next/link";
 
 const CATEGORY_COLORS = {
   commission: "text-success border-success/30 bg-success/5",
-  Mmni: "text-tertiary border-tertiary/30 bg-tertiary/5",
+  mini: "text-tertiary border-tertiary/30 bg-tertiary/5",
   personal: "text-primary border-primary/30 bg-primary/5",
   academic: "text-warning border-warning/30 bg-warning/5",
   competition: "text-warning border-warning/30 bg-warning/5",
@@ -77,20 +78,19 @@ export default function ProjectCard({ project }) {
 
       {/* Footer */}
       <div className="mt-auto pt-4 border-t border-border-hairline flex items-center justify-between">
-        <a
+        <Link
           href={`/projects/${project.id}`}
-          rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-[10px] font-label-caps tracking-widest uppercase text-text-secondary border border-border-hairline rounded px-3 py-1.5 hover:border-primary hover:text-text-primary transition-colors"
         >
           <span className="material-symbols-outlined text-[14px]">
             folder_open
           </span>
           View project
-        </a>
+        </Link>
 
-        {project.Link && project.Link !== "None" ? (
+        {project.demoUrl && project.demoUrl !== "None" ? (
           <a
-            href={project.Link}
+            href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-[10px] font-label-caps tracking-widest uppercase text-primary hover:text-text-primary transition-colors"

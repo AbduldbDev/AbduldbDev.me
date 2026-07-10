@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full overflow-x-hidden">
         <AuthProvider>
           <SplashScreen />
-          {/* <VisitNotifier /> */}
+          <VisitNotifier />
           <AOSProvider />
           <Navbar />
           <Particle />
