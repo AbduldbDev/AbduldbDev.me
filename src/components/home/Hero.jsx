@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import TerminalCard from "@/components/cards/TerminalCard";
 import { Sparkles } from "lucide-react";
 import TypewriterHeading from "../ui/typewriter";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -45,16 +46,12 @@ export default function Hero() {
               >
                 Download Resume
               </button>
-              <button
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/projects";
-                  link.click();
-                }}
+              <Link
+                href="/projects"
                 className="bg-transparent border border-border-hairline text-text-secondary px-5 sm:px-8 py-3 sm:py-4 rounded font-label-caps text-label-caps-xs sm:text-label-caps hover:border-text-primary hover:text-text-primary transition-all"
               >
                 Explore My Work
-              </button>
+              </Link>
             </div>
           </div>
           <div

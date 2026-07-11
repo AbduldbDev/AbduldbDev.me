@@ -44,30 +44,6 @@ export const fetchProjectById = async (id) => {
   }
 };
 
-/**
- * Insert a new project document into Firestore.
- *
- * Expected shape:
- * {
- *   Title        : string        — display title
- *   category     : string        — "commission" | "mini" | "personal" | "academic"
- *   description  : string        — short card description
- *   overview     : string[]      — paragraph(s) for the detail page
- *   problems     : string[]      — bullet list of problems solved
- *   solutions    : { title, body }[]
- *   features     : { title, body }[]
- *   stack        : string[]      — tech stack labels
- *   tags         : string[]      — card tags
- *   Img          : string        — cover image URL
- *   heroImage    : string        — hero image URL (can be same as Img)
- *   screenshots  : string[]      — array of screenshot URLs
- *   demoUrl      : string
- *   projectUrl   : string        — GitHub or repo URL
- *   codeSnippet  : string        — optional code block text
- *   snippetFile  : string        — optional filename label for snippet
- *   Date         : Timestamp     — auto-set to now if omitted
- * }
- */
 export const insertProject = async (data) => {
   try {
     const payload = {

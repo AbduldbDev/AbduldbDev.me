@@ -9,6 +9,8 @@ import SplashScreen from "@/components/layout/SplashScreen";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
+import metadata from "@/data/metadata";
+export { metadata };
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export default function RootLayout({ children }) {

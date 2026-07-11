@@ -121,10 +121,18 @@ function useAudio(enabled) {
   const playSound = (sound) => {
     if (!readyRef.current || !ctxRef.current || !bufferRef.current || !sound)
       return;
+
     if (ctxRef.current.state === "suspended") ctxRef.current.resume();
+
     const src = ctxRef.current.createBufferSource();
+    const gainNode = ctxRef.current.createGain();
+
+    gainNode.gain.value = 0.2; // 20% volume (0.0 - 1.0)
+
     src.buffer = bufferRef.current;
-    src.connect(ctxRef.current.destination);
+    src.connect(gainNode);
+    gainNode.connect(ctxRef.current.destination);
+
     src.start(0, sound[0] / 1000, sound[1] / 1000);
   };
 

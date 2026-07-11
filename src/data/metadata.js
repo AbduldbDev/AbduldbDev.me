@@ -1,4 +1,4 @@
-export default metadata = {
+const metadata = {
   title: "Abdul Aziz De Borja | Full-Stack Web Developer",
   description:
     "Portfolio of Abdul Aziz De Borja, a Full-Stack Web Developer from Laguna, Philippines. Experienced in Laravel, React, Next.js, Node.js, MySQL, PostgreSQL, and building scalable web applications, REST APIs, and enterprise systems.",

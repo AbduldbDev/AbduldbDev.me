@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { doc, getDoc } from "firebase/firestore";
@@ -94,12 +94,28 @@ export default function ProjectDetails() {
   return (
     <main className="pt-5 sm:pt-10 pb-24 overflow-x-hidden">
       {}
+
       <section className="relative flex flex-col items-center justify-center px-5 sm:px-6 md:px-margin-desktop pb-7 sm:pb-20 pt-16 sm:pt-24 text-center overflow-hidden w-full">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto" data-aos="fade-up">
+        <div
+          className="relative z-10 w-full max-w-3xl mx-auto"
+          data-aos="fade-up"
+        >
+          <div className="flex justify-start mb-6 sm:mb-8">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-text-secondary hover:text-primary transition-colors font-label-caps text-label-caps-xs sm:text-label-caps"
+            >
+              <span className="material-symbols-outlined text-[18px]">
+                arrow_back
+              </span>
+              Back
+            </Link>
+          </div>
+
           <span
             className={`inline-block mb-4 px-3 py-1 border rounded-full font-label-caps text-label-caps-xs sm:text-label-caps tracking-widest uppercase ${badgeColor}`}
           >
