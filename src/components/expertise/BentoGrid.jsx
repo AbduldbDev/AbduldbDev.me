@@ -170,7 +170,7 @@ export default function BentoGrid() {
         className="md:col-span-8 glass-card p-4 sm:p-card-padding rounded-xl"
       >
         <SectionHeader icon="code">Languages</SectionHeader>
-        <div className="grid grid-cols-4 gap-2 sm:gap-3">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3">
           {TECH_STACK.languages.map(({ icon, label, fallback }) => (
             <PillCard
               key={label}

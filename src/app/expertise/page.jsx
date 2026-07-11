@@ -17,6 +17,7 @@ export default function expertise() {
             </p>
           </div>
         </section>
+
         <BentoGrid />
         <Certifications />
       </main>

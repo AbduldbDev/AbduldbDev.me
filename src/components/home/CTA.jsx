@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -16,7 +17,7 @@ export default function CTA() {
           every step.
         </p>
         <div className="pt-4 sm:pt-6">
-          <a
+          <Link
             className="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary group"
             href="/contact"
           >
@@ -24,7 +25,7 @@ export default function CTA() {
             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
               arrow_forward
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

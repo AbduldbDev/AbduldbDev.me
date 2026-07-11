@@ -46,7 +46,7 @@ export default function ProjectsPage() {
 
       {/* Filter bar — horizontally scrollable on mobile */}
       <div data-aos="fade-up" data-aos-delay="50" className="mb-10 sm:mb-12">
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide pt-1 pb-3 border-b border-border-hairline">
+        <div className="flex gap-2 overflow-x-auto scrollbar-hide pt-1 pb-5 border-b border-border-hairline">
           {filters.map(({ key, label }) => (
             <button
               key={key}

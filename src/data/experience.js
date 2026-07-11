@@ -12,7 +12,7 @@ const experience = [
     ],
   },
   {
-    role: "Full-Stack Developer Intern (Project Lead)",
+    role: "Full-Stack Developer Intern | Project Lead",
     type: "Internship",
     company: "Alpha Centauri Garments Corporation",
     year: "Dec 2025 – Apr 2026",
