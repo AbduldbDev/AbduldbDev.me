@@ -1,5 +1,7 @@
 import React from "react";
 import socials from "@/data/socials";
+import ContactForm from "./ContactForm";
+
 export default function contactSection() {
   return (
     <section
@@ -11,7 +13,7 @@ export default function contactSection() {
         <span className="font-label-caps text-label-caps-xs sm:text-label-caps text-primary tracking-[0.2em] uppercase mb-3 sm:mb-4 block">
           Available for Hire
         </span>
-        <h2 className="font-display-lg text-[24px] sm:text-[36px] lg:text-display-lg text-text-primary mb-5 sm:mb-8 leading-tight">
+        <h2 className="font-display-lg text-[24px] sm:text-[36px] font-bold lg:text-display-lg text-text-primary mb-5 sm:mb-8 leading-tight">
           Let's build the next <span className="text-primary">benchmark</span>.
         </h2>
 
@@ -72,73 +74,7 @@ export default function contactSection() {
       </div>
 
       {/* Right — form */}
-      <div
-        data-aos="fade-left"
-        data-aos-duration="700"
-        data-aos-delay="100"
-        className="bg-surface-container-low border border-border-hairline p-4 sm:p-card-padding rounded-xl relative overflow-hidden"
-      >
-        <div className="absolute top-0 right-0 p-3 sm:p-4 opacity-10">
-          <span className="material-symbols-outlined text-[80px] sm:text-[120px]">
-            send
-          </span>
-        </div>
-
-        <form className="relative z-10 space-y-4 sm:space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="font-label-caps text-label-caps-xs sm:text-label-caps text-text-muted">
-                Full Name
-              </label>
-              <input
-                className="w-full bg-canvas border border-border-hairline text-text-primary text-sm rounded focus:border-primary focus:ring-1 focus:ring-primary transition-all p-2.5 sm:p-3 outline-none"
-                placeholder="John Doe"
-                type="text"
-              />
-            </div>
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="font-label-caps text-label-caps-xs sm:text-label-caps text-text-muted">
-                Email
-              </label>
-              <input
-                className="w-full bg-canvas border border-border-hairline text-text-primary text-sm rounded focus:border-primary focus:ring-1 focus:ring-primary transition-all p-2.5 sm:p-3 outline-none"
-                placeholder="john@example.com"
-                type="email"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-1.5 sm:space-y-2">
-            <label className="font-label-caps text-label-caps-xs sm:text-label-caps text-text-muted">
-              Subject
-            </label>
-            <select className="w-full bg-canvas border border-border-hairline text-text-primary text-sm rounded focus:border-primary focus:ring-1 focus:ring-primary transition-all p-2.5 sm:p-3 outline-none">
-              <option>New Project Inquiry</option>
-              <option>Collaboration Request</option>
-              <option>Consulting</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div className="space-y-1.5 sm:space-y-2">
-            <label className="font-label-caps text-label-caps-xs sm:text-label-caps text-text-muted">
-              Message
-            </label>
-            <textarea
-              className="w-full bg-canvas border border-border-hairline text-text-primary text-sm rounded focus:border-primary focus:ring-1 focus:ring-primary transition-all p-2.5 sm:p-3 outline-none resize-none"
-              placeholder="Briefly describe your project..."
-              rows="3"
-            ></textarea>
-          </div>
-
-          <button
-            className="w-full py-3 sm:py-4 bg-primary text-on-primary font-label-caps text-label-caps-xs sm:text-label-caps font-bold rounded uppercase tracking-widest glow-button shadow-lg"
-            type="submit"
-          >
-            Initialize Connection
-          </button>
-        </form>
-      </div>
+      <ContactForm />
     </section>
   );
 }
