@@ -3,7 +3,7 @@ import { db } from "@/firebase";
 
 export const fetchProjects = async () => {
   try {
-    const q = query(collection(db, "projects"), orderBy("Date", "desc"));
+    const q = query(collection(db, "projects-new"), orderBy("Date", "desc"));
 
     const querySnapshot = await getDocs(q);
 
@@ -14,7 +14,7 @@ export const fetchProjects = async () => {
         id: doc.id,
         title: data.Title,
         link: data.Link,
-        thumbnail: data.Img, // Firestore Img -> thumbnail
+        thumbnail: data.Img,
         ...data,
       };
     });
