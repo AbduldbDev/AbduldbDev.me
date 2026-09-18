@@ -73,7 +73,7 @@ export default function Biography() {
         >
           <div className="group w-full max-w-xs sm:max-w-sm md:max-w-none aspect-square rounded-2xl overflow-hidden border border-border-hairline glass-card p-4">
             <img
-              src="/Image.png"
+              src="/image.png"
               alt="Professional portrait"
               className="w-full h-full object-cover rounded-xl grayscale hover:filter-none transition-all duration-700"
             />
